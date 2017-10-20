@@ -54,8 +54,19 @@ app.get("/recentSearches/", function(req, res, next) {
       SearchTerm: searchStrings.searchStr,
       SearchDate: searchStrings.serachDate
     };
-    res.json(searchStrings);
+    var results = [];
+      searchStrings.forEach(function(result) {
+        //console.log(result.searchStr);
+        results.push({
+          'Search Term': result.searchStr,
+          'Search Date': result.searchDate
+          });
+     
+      });
+//console.log(results) 
+    res.json(results);
   });
+
 });
 
 //get image search using google custome search
