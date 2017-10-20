@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<!-- 
+I ended up using Google Custom Search JSON API, which is a RESTful API. 
+It wasn't that hard to implement actually. Just need an API key and APP ID and then can start getting JSON data with a http request. 
+I used the request node module! Any feedback welcome!
+-->
+<html>
+<!-- export to github: ctl + shift + e -->
+   <head>
+      <title>Image Search Abstraction Layer - mahesh Backend Challenges | Free Code Camp</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div style="text-align: left" class="container">
+         <h1>API Basejump: Image Search Abstraction Layer</h1>
+         <h3><a href="https://freecodecamp.com" target="_blank">Free Code Camp</a> Backend Challenge by Mahesh</h3>
+        
+        User Stories:
+      <ol>
+          <li>
+           I can get the image URLs, alt text and page urls for a set of images relating to a given search string
+          </li>
+          <li>
+          I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+          </li>
+        <li>
+        I can get a list of the most recently submitted search string.
+        </li>
+        </ol>
+     
+     <p>
+        <h3>Example: Search for Images</h3>
+        
+        <a href="https://image-search-mahesh.glitch.me/imageSearch/elephants?offset=2">
+        <code>{ https://image-search-mahesh.glitch.me/imageSearch/elephants?offset=2 }</code>
+        </a>
+        
+     </p>
+      <p>
+        <h3>Usage</h3>
+        Replace "elephants" with image search name and offset = page number
+     </p>
+      <p>
+        <h3>Example: Your Latest Searches</h3>
+        
+        <a href="https://image-search-mahesh.glitch.me/recentSearches/">
+        <code>{ https://image-search-mahesh.glitch.me/recentSearches/ }</code>
+        </a>
+     </p>
+     </div>
+   </body>
+
+</html>
